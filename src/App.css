@@ -1,0 +1,12 @@
+@import '~antd/dist/antd.css';
+
+.App {
+  text-align: center;
+}
+
+.Container {
+  margin: 5%;
+  padding: 3%;
+  min-height: 150px;
+  min-width: 200px;
+}
