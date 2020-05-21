@@ -1,7 +1,5 @@
 import React from 'react';
 import {Row, Col, Button, Icon} from 'antd';
-import Mouselog from 'mouselog';
-import config from './MouselogConfig';
 const NumberStringLength=8;
 
 class VirtualKeyboard extends React.Component {
@@ -11,11 +9,9 @@ class VirtualKeyboard extends React.Component {
       input: "",
       target: this.generateRandomNumberString()
     };
-    this.mouselog = new Mouselog();
   }
 
   componentDidMount() {
-    this.mouselog.debug(config, "debug");
   }
 
   updateInput(keyStroke) {

@@ -1,13 +1,11 @@
 import React from 'react';
 import {Select, Radio, Button, Row, Col} from 'antd';
-import Mouselog from 'mouselog';
 import config from './MouselogConfig';
 const RadioGroupCount = 6;
 
 class RandomForm extends React.Component {
   constructor(props) {
     super(props);
-    this.mouselog = new Mouselog();
     this.state = {
       radioTargetChoices: this.generateRadioTargetChoices(),
       radioChoices: Array(RadioGroupCount).fill("0"),
@@ -16,7 +14,6 @@ class RandomForm extends React.Component {
   }
   
   componentDidMount() {
-    this.mouselog.run(config);
   }
 
   onButtonClick(e) {

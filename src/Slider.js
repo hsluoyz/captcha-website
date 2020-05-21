@@ -1,6 +1,5 @@
 import React from 'react';
 import {Slider, Button} from 'antd';
-import Mouselog from 'mouselog';
 import config from './MouselogConfig';
 
 class MySlider extends React.Component {
@@ -13,11 +12,9 @@ class MySlider extends React.Component {
       targetValue1: this.generateTargetValue(),
       targetValue2: this.generateTargetValue()
     };
-    this.mouselog = new Mouselog();
   }
 
   componentDidMount() {
-    this.mouselog.run(config);
   }
 
   generateTargetValue() {
@@ -65,11 +62,5 @@ class MySlider extends React.Component {
 
 export default MySlider;
 
-
-try {
-  mouselog.run()
-} catch {
-  // Internal error handling
-}
 
 
